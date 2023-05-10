@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name='viewport' content='width=device-width, initial-scale=1'/>
+  <title>Donation Form</title>
+  <style>
+    /* CSS styling */
+    .form-container {
+      width: 300px;
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid blue;
+      border-radius: 10px;
+      
+    }
+
+    .form-container label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .form-container input[type="text"],
+    .form-container input[type="email"],
+    .form-container select,
+    .form-container textarea {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    .form-container input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#"> Daniel Impact Network</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+         <ul class="navbar-nav">
+            <li class="nav-item active">
+               <a class="nav-link" href="index.html"> Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="About us.html"> About Us </a>
+            </li>
+            <li class="nav-item">
+              
+            </li>
+         </ul>
+      </div>
+   </nav>
+   
+  
+
+
+  <div class="form-container">
+    <h2>Donation </h2>
+    <form id="donation-form" >
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="amount">Donation Amount:</label>
+      <input type="number" id="amount" name="amount" required>
+
+      <label for="currency">Currency:</label>
+      <select id="currency" name="currency" required>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+        <option value="GHC">GHC</option>
+      </select>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <input type="submit" value="Donate">
+    </form>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   
+
+  <script>
+    // JavaScript code
+    document.getElementById("donation-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Retrieve form values
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var amount = document.getElementById("amount").value;
+      var currency = document.getElementById("currency").value;
+      var message = document.getElementById("message").value;
+
+      // Perform donation processing (you can replace this with your actual logic)
+      console.log("Donation Details:");
+      console.log("Name: " + name);
+      console.log("Email: " + email);
+      console.log("Amount: " + amount);
+      console.log("Currency: " + currency);
+      console.log("Message: " + message);
+
+      // Clear form fields
+      document.getElementById("donation-form").reset();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+*{
+	box-sizing:border-box;
+	margin:0;
+	padding:0;
+	
+	}
+
+
+.header h2{
+	color:black;
+	font-family:sans-serif;
+	margin:10px;
+	}
+	
+	
+.description{
+	content='';
+	position: absolute;
+	top:25%;
+	left:1%;
+	margin:0;
+	padding:0;
+	transform: translate(1%,1%);
+	
+	}
+
+
+	.h3{
+
+		font-family: 'Times New Roman', Times, serif;
+	}
+
+
+	.outreach{
+      position: relative;
+	  size: contain;
+	  height: 50vh;
+width:auto;
+
+
+	}
+	
+
+	.handsome{
+
+		position: relative;
+		size: cover;
+		height: 50vh;
+  width:auto;
+  
+
+
+	}
+	
